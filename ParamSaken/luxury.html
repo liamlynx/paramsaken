@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Cars - Param Saken Car Rentals</title>
+    <link rel="stylesheet" href="categories/css/carstyles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="categories/images/logo.png" alt="Car Rentals Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="categories.html">CATEGORIES</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="car-intro">
+            <h1>Explore Our Luxury Car Collection</h1>
+            <p>Indulge in our premium selection of luxury cars for an unparalleled experience.</p>
+        </section>
+
+        <section class="car-gallery">
+            <div class="car-item">
+                <img src="categories/images/luxury/mustang.png" alt="Ford Mustang">
+                <h2 class="car-name">FORD MUSTANG</h2>
+                <p class="car-description">An iconic sports car that delivers exhilarating performance.</p>
+                <p class="car-price">Price: PHP 18,000</p>
+                <button class="book-now" onclick="openModal('FORD MUSTANG', 18000)">Book Now</button>
+            </div>
+            <div class="car-item">
+                <img src="categories/images/luxury/86.png" alt="Toyota 86">
+                <h2 class="car-name">TOYOTA 86</h2>
+                <p class="car-description">A lightweight sports coupe designed for driving enthusiasts.</p>
+                <p class="car-price">Price: PHP 15,500</p>
+                <button class="book-now" onclick="openModal('TOYOTA 86', 15500)">Book Now</button>
+            </div>
+            <div class="car-item">
+                <img src="categories/images/luxury/370z.png" alt="Nissan 370Z Nismo">
+                <h2 class="car-name">NISSAN 370Z NISMO</h2>
+                <p class="car-description">A high-performance sports car with a sleek design.</p>
+                <p class="car-price">Price: PHP 19,000</p>
+                <button class="book-now" onclick="openModal('NISSAN 370Z NISMO', 19000)">Book Now</button>
+            </div>
+            <div class="car-item">
+                <img src="categories/images/luxury/supra.png" alt="Toyota Supra">
+                <h2 class="car-name">TOYOTA SUPRA</h2>
+                <p class="car-description">Legendary sports car known for its speed and agility.</p>
+                <p class="car-price">Price: PHP 20,000</p>
+                <button class="book-now" onclick="openModal('TOYOTA SUPRA', 20000)">Book Now</button>
+            </div>
+            <div class="car-item">
+                <img src="categories/images/luxury/gtr.png" alt="Nissan GTR R35">
+                <h2 class="car-name">NISSAN GTR R35</h2>
+                <p class="car-description">The ultimate supercar with unparalleled performance.</p>
+                <p class="car-price">Price: PHP 25,000</p>
+                <button class="book-now" onclick="openModal('NISSAN GTR R35', 25000)">Book Now</button>
+            </div>
+            <div class="car-item">
+                <img src="categories/images/luxury/alphard.png" alt="Toyota Alphard">
+                <h2 class="car-name">TOYOTA ALPHARD</h2>
+                <p class="car-description">Luxury MPV offering comfort and elegance for families.</p>
+                <p class="car-price">Price: PHP 17,000</p>
+                <button class="book-now" onclick="openModal('TOYOTA ALPHARD', 17000)">Book Now</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Booking Form</h2>
+            <form id="bookingForm">
+                <label for="carName">Car Model:</label>
+                <input type="text" id="carName" name="carName" readonly>
+                <label for="price">Price:</label>
+                <input type="text" id="price" name="price" readonly>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Your Phone:</label>
+                <input type="text" id="phone" name="phone" required>
+                <button type="submit">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Param Saken Car Rentals. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openModal(carName, price) {
+            document.getElementById('carName').value = carName;
+            document.getElementById('price').value = 'PHP ' + price;
+            document.getElementById('bookingModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('bookingModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('bookingModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hatchbacks - Param Saken Car Rentals</title>
+    <link rel="stylesheet" href="categories/css/carstyles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="categories/images/logo.png" alt="Car Rentals Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="categories.html">CATEGORIES</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="car-intro">
+            <h1>Explore Our Hatchback Collection</h1>
+            <p>Our hatchbacks combine compact size with great performance, perfect for city driving.</p>
+        </section>
+
+        <section class="car-gallery">
+            <div class="car-item">
+                <img src="categories/images/hatchback/mirage.png" alt="Mitsubishi Mirage">
+                <h2 class="car-name">MITSUBISHI MIRAGE</h2>
+                <p class="car-description">Fuel-efficient and perfect for urban travel.</p>
+                <p class="car-price">Price: PHP 2,500</p>
+                <button class="book-now" onclick="openModal('MITSUBISHI MIRAGE', 2500)">Book Now</button>
+            </div>
+            <div class="car-item">
+                <img src="categories/images/hatchback/wigo.png" alt="Toyota Wigo">
+                <h2 class="car-name">TOYOTA WIGO</h2>
+                <p class="car-description">Compact and agile, ideal for city navigation.</p>
+                <p class="car-price">Price: PHP 3,000</p>
+                <button class="book-now" onclick="openModal('TOYOTA WIGO', 3000)">Book Now</button>
+            </div>
+            <div class="car-item">
+                <img src="categories/images/hatchback/swift.png" alt="Suzuki Swift">
+                <h2 class="car-name">SUZUKI SWIFT</h2>
+                <p class="car-description">Stylish design with impressive handling.</p>
+                <p class="car-price">Price: PHP 3,500</p>
+                <button class="book-now" onclick="openModal('SUZUKI SWIFT', 3500)">Book Now</button>
+            </div>
+            <div class="car-item">
+                <img src="categories/images/hatchback/brio.png" alt="Honda Brio">
+                <h2 class="car-name">HONDA BRIO</h2>
+                <p class="car-description">Compact and powerful, perfect for urban adventures.</p>
+                <p class="car-price">Price: PHP 3,200</p>
+                <button class="book-now" onclick="openModal('HONDA BRIO', 3200)">Book Now</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Booking Form</h2>
+            <form id="bookingForm">
+                <label for="carName">Car Model:</label>
+                <input type="text" id="carName" name="carName" readonly>
+                <label for="price">Price:</label>
+                <input type="text" id="price" name="price" readonly>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Your Phone:</label>
+                <input type="text" id="phone" name="phone" required>
+                <button type="submit">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Param Saken Car Rentals. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openModal(carName, price) {
+            document.getElementById('carName').value = carName;
+            document.getElementById('price').value = 'PHP ' + price;
+            document.getElementById('bookingModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('bookingModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('bookingModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

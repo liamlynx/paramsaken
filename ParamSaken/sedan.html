@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sedans - Param Saken Car Rentals</title>
+    <link rel="stylesheet" href="categories/css/carstyles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="categories/images/logo.png" alt="Car Rentals Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="categories.html">CATEGORIES</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="car-intro">
+            <h1>Explore Our Car Collection</h1>
+            <p>Our cars offer comfort, efficiency, and style, perfect for everyday driving and special occasions.</p>
+        </section>
+
+        <section class="car-gallery">
+            <div class="car-item">
+                <img src="categories/images/sedan/vios.png" alt="VIOS">
+                <h2 class="car-name">TOYOTA VIOS</h2>
+                <p class="car-description">Experience the perfect blend of style and performance.</p>
+                <p class="car-price">Price: PHP 3,000</p>
+                <button class="book-now" onclick="openModal('VIOS', 3000)">Book Now</button>
+            </div>
+            <div class="car-item">
+                <img src="categories/images/sedan/altis.png" alt="Altis">
+                <h2 class="car-name">TOYOTA ALTIS</h2>
+                <p class="car-description">Comfort and luxury in one sleek package.</p>
+                <p class="car-price">Price: PHP 4,500</p>
+                <button class="book-now" onclick="openModal('ALTIS', 4500)">Book Now</button>
+            </div>
+            <div class="car-item">
+                <img src="categories/images/sedan/accent.png" alt="Accent">
+                <h2 class="car-name">HYUNDAI ACCENT</h2>
+                <p class="car-description">Ideal for city driving and long journeys alike.</p>
+                <p class="car-price">Price: PHP 2,500</p>
+                <button class="book-now" onclick="openModal('ACCENT', 2500)">Book Now</button>
+            </div>
+            <div class="car-item">
+                <img src="categories/images/sedan/city.png" alt="City">
+                <h2 class="car-name">HONDA CITY</h2>
+                <p class="car-description">Reliability and elegance for all your travels.</p>
+                <p class="car-price">Price: PHP 3,500</p>
+                <button class="book-now" onclick="openModal('CITY', 3500)">Book Now</button>
+            </div>
+            <div class="car-item">
+                <img src="categories/images/sedan/civic.png" alt="Civic">
+                <h2 class="car-name">HONDA CIVIC</h2>
+                <p class="car-description">Sporty design and exceptional performance.</p>
+                <p class="car-price">Price: PHP 4,000</p>
+                <button class="book-now" onclick="openModal('CIVIC', 4000)">Book Now</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Booking Form</h2>
+            <form id="bookingForm">
+                <label for="carName">Car Model:</label>
+                <input type="text" id="carName" name="carName" readonly>
+                <label for="price">Price:</label>
+                <input type="text" id="price" name="price" readonly>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Your Phone:</label>
+                <input type="text" id="phone" name="phone" required>
+                <button type="submit">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Param Saken Car Rentals. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openModal(carName, price) {
+            document.getElementById('carName').value = carName;
+            document.getElementById('price').value = 'PHP ' + price;
+            document.getElementById('bookingModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('bookingModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('bookingModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+/*-----Styles For Homepage-----*/
+body {
+    font-family: 'Libre Baskerville', serif;
+    background-color: #efefef;
+    margin: 0;
+    color: #1f1f1f;
+}
+
+/* Header and Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+    background-color: #1f1f1f;
+}
+
+.logo img {
+    width: 200px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5em;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 2em; 
+    line-height: 1.5; 
+    color: #efefef; 
+    font-family: 'Playfair Display', serif;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a80000; 
+}
+
+/* Intro Section */
+.intro {
+    position: relative;
+    text-align: center;
+    color: #efefef;
+}
+
+.intro img {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+}
+
+.intro-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2em;
+    border-radius: 10px;
+}
+
+.intro-text h1 {
+    font-size: 3em;
+    font-family: 'Playfair Display', serif;
+}
+
+.intro-text p {
+    font-size: 1.2em;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 3em 1.5em;
+    background-color: #efefef; 
+}
+
+.feature-box {
+    text-align: center;
+    padding: 1.5em;
+    border-radius: 8px;
+    max-width: 18em;
+    background-color: #d4d4d4; 
+}
+
+.feature-box h3 {
+    font-size: 1.6em;
+    font-family: 'Playfair Display', serif;
+    color: #1f1f1f;
+}
+
+.feature-box p {
+    font-size: 1.1em;
+    font-family: 'Libre Baskerville', serif;
+    color: #707070;
+}
+
+/* Cars Section */
+.cars {
+    padding: 3em 1.5em;
+    background-color: #efefef; 
+}
+
+.cars h2 {
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1em;
+    color: #1f1f1f;
+}
+
+.car-description {
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.2em;
+    margin-bottom: 2em;
+    color: #1f1f1f;
+}
+
+
+.car-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+    gap: 1.5em;
+    justify-items: center;
+}
+
+.car-gallery img {
+    width: 200px; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    border: 2px solid #731010; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.explore-btn {
+    display: block;
+    text-align: center;
+    margin: 2em auto;
+    padding: 0.75em 2em;
+    background-color: #1f1f1f; 
+    color: #efefef;
+    text-transform: uppercase;
+    font-size: 1em;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #731010; 
+}
+
+/* Steps Section */
+.steps {
+    background-color: #731010; 
+    padding: 3em 1.5em;
+    text-align: center;
+}
+
+.steps h2 {
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1.5em;
+    color: #d4d4d4; 
+}
+
+.steps .step-container {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 2em;
+    padding: 0 2em;
+}
+
+.steps .step {
+    background-color: #1f1f1f;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 20em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+    margin: 0 1em;
+}
+
+.steps .step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.steps .step h3 {
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+    font-family: 'Playfair Display', serif;
+    color: #efefef;
+}
+
+.steps .step p {
+    font-size: 1.1em;
+    font-family: 'Libre Baskerville', serif;
+    color: #efefef;
+}
+
+/* Footer */
+footer {
+    background-color: #1f1f1f; 
+    color: #d4d4d4; 
+    text-align: center;
+    padding: 2em 1.5em;
+    font-size: 1em;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    nav ul {
+        gap: 1em;
+    }
+
+    nav ul li a {
+        font-size: 1.5em;
+    }
+
+
+    .intro-text h1 {
+        font-size: 2.5em;
+    }
+
+    .intro-text p {
+        font-size: 1em; 
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-box {
+        max-width: 90%;
+        margin-bottom: 2em;
+    }
+
+    .steps .step-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .steps .step {
+        margin: 1em 0;
+        max-width: 90%;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5em 0;
+    }
+
+
+    .intro {
+        text-align: center;
+    }
+
+    .intro-text {
+        width: 60%;
+        max-width: 250px;
+        padding: 0.5em;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+    }
+
+    .intro-text h1 {
+        font-size: 1.3em;
+        margin-bottom: 0.3em;
+    }
+
+    .intro-text p {
+        font-size: 0.7em;
+    }
+
+    .cars h2 {
+        font-size: 2em;
+    }
+
+    .car-description {
+        font-size: 1em;
+    }
+
+    .explore-btn {
+        font-size: 0.9em;
+        padding: 0.5em 1.5em; 
+    }
+}
+
+/*-----End of Styles For Homepage-----*/
